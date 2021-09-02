@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 1.5;
+}
+
+@mixin xs-screen{
+    @media only screen and (max-width: 575px) {
+        @content;
+    }
+}
+    p{color:#718096;}
+.background{
+    clip-path: polygon(0% 49%, 6% 54%, 14% 59%, 23% 63%, 31% 62%, 38% 56%, 44% 52%, 52% 48%, 60% 44%, 72% 43%, 83% 46%, 88% 50%, 100% 56%, 100% 0, 0 0);
+    background-color: hsl(225, 100%, 94%);
+    height: 800px;
+    position: relative;
+    @include xs-screen{
+        height: 800px;
+        width: 100%;
+    } 
+}
+.container{
+    height: 800px;
+    @include xs-screen{
+        height: 1000px;
+    } 
+}
+.top{
+    margin-bottom: 30px;
+    img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        @include xs-screen{
+            width: 100%;
+        } 
+    }
+}
+.main{
+    height: 700px;
+    width: 450px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: #b2b6ff 0px 10px 10px 1px;
+    @include xs-screen{
+        width: 90%;
+    } 
+}
+.text {
+    text-align: center;
+}
+.item {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: hsl(225, 100%, 98%);
+    display: flex;
+    margin-bottom: 40px; 
+    img{
+        margin-left: 15px;
+        margin-top: 25px;
+    }
+}
+.text-2{
+    margin: 25px 0 0 10px;
+}
+.bottom {
+    width: 60%;
+    margin-left: 20%;
+    @include xs-screen{
+        width: 77%;
+        margin-left: 13%;
+    } 
+    
+}
+.button-of-item {
+    margin: 40px 0 0 30px; 
+    a{
+        cursor: pointer;
+        color: hsl(225, 94%, 68%);
+        text-decoration: none;
+    }
+    :hover{
+        color: #474ff7;
+        transition: .5s;
+    }
+}
+.button-main {
+    padding: 6px;
+    background-color: hsl(253, 68%, 56%);
+    border-radius: 10px;
+    text-align: center;
+    height: 45px;
+    color: white;
+    box-shadow: #b2b6ff 0px 10px 10px 1px;
+    cursor: pointer;
+}
+.cancel{
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #aaa;
+    :hover{
+        color: black;
+        transition: .5s;
+    }
+}
+.footer{
+    text-align: center;
+    height: 100px;
+    a:hover{
+        color: #333df8;
+    }
+}
+// }
